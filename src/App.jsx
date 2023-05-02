@@ -1,35 +1,68 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import photo from "./assets/photo.jpg";
+import avatar from "./assets/avatar.svg";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Header />
+      <div className="container mt-5 presentation">
+        <div className="row">
+          <div className="col-md-6 col-sm-auto text-center">
+            <h2 className="text-white">Hello there, I'm</h2>
+            <h1
+              className="text-white text-animation text-center"
+              style={{ marginLeft: "17%" }}
+            >
+              Rafael Chevez Sanchez
+            </h1>
+            <h3 className="text-white">I'm Full stack Developer</h3>
+            <FontAwesomeIcon
+              icon={faGithub}
+              style={{ fontSize: "2em", color: "white", marginRight: "20px" }}
+            />
+
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              style={{ fontSize: "2em", color: "white" }}
+            />
+
+            <div className="mt-3">
+              <button type="button" className="btn btn-primary">
+                Descargar cv
+              </button>
+            </div>
+          </div>
+
+          <div
+            className="col-md-6 col-sm-auto
+          "
+          ></div>
+        </div>
+
+        <div className="row"></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+
+      <div className="row about" id="idAbout">
+        <div className="container">
+          <div className="text-center mt-5">
+            <h3 className="text-bold text-dark">Acerca de mi</h3>
+            <img alt="avatar" src={avatar} style={{ width: "190px" }} />
+          </div>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <div className="row about">
+        <section className=""></section>
+      </div>
+
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
