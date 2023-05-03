@@ -32,6 +32,7 @@ function App() {
             <FontAwesomeIcon
               icon={faLinkedin}
               style={{ fontSize: "2em", color: "white" }}
+              href="https://www.linkedin.com/in/rafael-chevez-s%C3%A1nchez-1407b5199/"
             />
 
             <div className="mt-3">
@@ -52,12 +53,63 @@ function App() {
           <div className="text-center mt-5">
             <h3 className="text-bold text-dark">{t("about.title")}</h3>
             <img alt="avatar" src={avatar} style={{ width: "190px" }} />
+            <p className="text-dark text-bold text-center mt-4">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="row about">
-        <section className=""></section>
+      <div className="row proyect" id="IdService">
+        <div></div>
+      </div>
+
+      <div className="row contact" id="IdContact">
+        <div className="container">
+          <div className="row mt-4 text-center">
+            <h2 className="text-bold text-center">{t("contact.title")}</h2>
+            <hr className="border border-dark border-3 opacity-75"></hr>
+          </div>
+
+          <div className="d-flex align-items-center justify-content-center">
+            <div className="">
+              <div className="mb-4">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
+                  {t("contact.name")}
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id="exampleFormControlInput1"
+                />
+              </div>
+
+              <div className="mb-3">
+                <label htmlFor="exampleFormControlInput1" className="form-label">
+                  {t("contact.email")}
+                </label>
+                <input
+                  type="email"
+                  className="form-control"
+                  id="exampleFormControlInput1"
+                  placeholder="name@example.com"
+                />
+              </div>
+              <div className="mb-3">
+                <label htmlFor="exampleFormControlTextarea1" className="form-label">
+                  {t("contact.message")}
+                </label>
+                <textarea
+                  className="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+                <button className="btn btn-primary mt-3">{t("contact.send")}</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Footer />

@@ -12,5 +12,12 @@
     },
     "about":{
         "title":"About me"
+    },
+    "contact":{
+        "title":"Contact",
+        "name":"Your name",
+        "email":"Your email",
+        "message":"Message",
+        "send":"Send"
     }
 }

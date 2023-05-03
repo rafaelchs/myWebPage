@@ -20,7 +20,18 @@ body {
 .about {
   background-color: white;
   max-width: 100%;
+  height: 450px;
+}
+
+.proyect {
+  max-width: 100%;
   height: 250px;
+}
+
+.contact {
+  background-color: white;
+  max-width: 100%;
+  height: 455px;
 }
 
 .text-animation {

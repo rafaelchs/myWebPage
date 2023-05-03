@@ -12,6 +12,13 @@
     },
     "about":{
         "title":"Acerca de mi"
+    },
+    "contact":{
+        "title":"Contacto",
+        "name":"Su nombre",
+        "email":"Su correo",
+        "message":"Mensaje",
+        "send":"Enviar"
     }
 
 }

@@ -53,7 +53,7 @@ export const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#IdService"
+                    href="#IdContact"
                     className="text-dark nav-link font-weight-bold"
                   >
                     {t("navbar.contact")}
@@ -70,7 +70,7 @@ export const Header = () => {
                   >
                     {i18n.language}
                   </a>
-                  <ul className="dropdown-menu">
+                  <ul className="dropdown-menu dropdown-menu-end">
                     <li>
                       <a
                         className="dropdown-item text-dark text-bold"
