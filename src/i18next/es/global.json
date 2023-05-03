@@ -1,0 +1,17 @@
+{
+    "navbar":{
+        "home":"Inicio",
+        "about":"Acerca",
+        "service":"Servicios",
+        "contact":"Contacto"
+    },
+    "presentation":{
+        "text_1":"Hola, Soy",
+        "text_2":"Soy un desarrollador Full Stack",
+        "text_3":"Descargar cv"
+    },
+    "about":{
+        "title":"Acerca de mi"
+    }
+
+}

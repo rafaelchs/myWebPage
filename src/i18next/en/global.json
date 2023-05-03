@@ -1,0 +1,16 @@
+{
+    "navbar":{
+        "home":"Home",
+        "about":"About",
+        "service":"Service",
+        "contact":"Contact"
+    },
+    "presentation":{
+        "text_1":"Hello there, I'm",
+        "text_2":"I'm a Full stack Developer",
+        "text_3":"Download cv"
+    },
+    "about":{
+        "title":"About me"
+    }
+}
