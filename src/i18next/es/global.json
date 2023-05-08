@@ -1,24 +1,29 @@
 {
-    "navbar":{
-        "home":"Inicio",
-        "about":"Acerca",
-        "service":"Servicios",
-        "contact":"Contacto"
-    },
-    "presentation":{
-        "text_1":"Hola, Soy",
-        "text_2":"Soy un desarrollador Full Stack",
-        "text_3":"Descargar cv"
-    },
-    "about":{
-        "title":"Acerca de mi"
-    },
-    "contact":{
-        "title":"Contacto",
-        "name":"Su nombre",
-        "email":"Su correo",
-        "message":"Mensaje",
-        "send":"Enviar"
-    }
-
+  "navbar": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "service": "Proyectos",
+    "contact": "Contacto"
+  },
+  "presentation": {
+    "text_1": "Hola, Soy",
+    "text_2": "Soy un desarrollador Full Stack",
+    "text_3": "Descargar cv"
+  },
+  "about": {
+    "title": "Acerca de mi",
+    "content": "Soy un apasionado a la programación. Me gusta dar siempre lo mejor de mí en todo, por más simple o compleja que pueda ser la tarea."
+  },
+  "contact": {
+    "title": "Contacto",
+    "name": "Su nombre",
+    "email": "Su correo",
+    "message": "Mensaje",
+    "send": "Enviar"
+  },
+  "project": {
+    "title": "Proyectos",
+    "soon": "Pronto",
+    "go":"Ir"
+  }
 }

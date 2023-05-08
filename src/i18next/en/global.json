@@ -2,7 +2,7 @@
     "navbar":{
         "home":"Home",
         "about":"About",
-        "service":"Service",
+        "service":"Projects",
         "contact":"Contact"
     },
     "presentation":{
@@ -11,7 +11,8 @@
         "text_3":"Download cv"
     },
     "about":{
-        "title":"About me"
+        "title":"About me",
+        "content": "I'm passionate about programming. I like to always give my best in everything, no matter how simple or complex the task may be."
     },
     "contact":{
         "title":"Contact",
@@ -19,5 +20,10 @@
         "email":"Your email",
         "message":"Message",
         "send":"Send"
+    },
+    "project":{
+        "title":"Projects",
+        "soon":"Soon",
+        "go":"Go"
     }
 }
