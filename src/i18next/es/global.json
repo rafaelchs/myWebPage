@@ -25,5 +25,9 @@
     "title": "Proyectos",
     "soon": "Pronto",
     "go":"Ir"
+  },
+  "alert":{
+    "emptyField":"¡Hay campos vacíos!",
+    "success":"El mensaje fue enviado."
   }
 }

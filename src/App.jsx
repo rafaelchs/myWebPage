@@ -1,14 +1,11 @@
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
-import {Project} from "./components/Project";
-import {Contact} from "./components/Contact";
+import { Project } from "./components/Project";
+import { Contact } from "./components/Contact";
 import { Skills } from "./components/Skills";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import developer from "./assets/developer.svg";
 import avatar from "./assets/avatar.svg";
 import { useTranslation } from "react-i18next";
@@ -48,18 +45,22 @@ function App() {
 
             <div className="mt-3">
               <Link to="./file/cv.pdf">
-              <button type="button" className="btn btn-primary">
-                {t("presentation.text_3")}
-              </button>
+                <button type="button" className="btn btn-primary">
+                  {t("presentation.text_3")}
+                </button>
               </Link>
             </div>
           </div>
 
           <div className="col-md-6 col-sm-auto mt-2">
-            <img className="img-fluid float-start" src={developer} alt="icon" style={{maxWidth:"70%", marginLeft: "25px"}} />
+            <img
+              className="img-fluid float-start"
+              src={developer}
+              alt="icon"
+              style={{ maxWidth: "70%", marginLeft: "25px" }}
+            />
           </div>
         </div>
-
       </div>
 
       <div className="row about" id="idAbout">
@@ -68,26 +69,23 @@ function App() {
             <h3 className="text-bold text-dark">{t("about.title")}</h3>
             <img alt="avatar" src={avatar} style={{ width: "190px" }} />
             <p className="text-dark text-bold text-center mt-4">
-             {t("about.content")}
+              {t("about.content")}
             </p>
           </div>
         </div>
       </div>
       <div className="row skills">
-        <Skills/>
-       
+        <Skills />
       </div>
 
       <div className="row project" id="IdProject">
-       <Project/>
+        <Project />
       </div>
 
-      <div className="row beforeContact">
-      </div>
+      <div className="row beforeContact"></div>
 
       <div className="row contact" id="IdContact">
-        <Contact/>
-      
+        <Contact />
       </div>
 
       <Footer />

@@ -1,8 +1,67 @@
 import { useTranslation } from "react-i18next";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
 
 export const Contact = () => {
-
   const [t] = useTranslation("global");
+  const form = useRef();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (name === "" || email === "" || message === "") {
+      errorAlert();
+      return;
+    }
+
+    emailjs
+      .sendForm(
+        process.env.YOUR_SERVICE_ID,
+        process.env.YOUR_TEMPLATE_ID,
+        form.current,
+        process.env.YOUR_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          successAlert();
+        },
+        (error) => {
+          console.log(error.text);
+          errorToSendAlert(error.text);
+        }
+      );
+  };
+
+  const errorAlert = () => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: t("alert.emptyField"),
+      width: "300px",
+    });
+  };
+
+  const errorToSendAlert = (text) => {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: text,
+      width: "300px",
+    });
+  };
+
+  const successAlert = () => {
+    Swal.fire({
+      icon: "success",
+      text: t("alert.success"),
+      width: "300px",
+    });
+  };
 
   return (
     <>
@@ -14,32 +73,34 @@ export const Contact = () => {
           </div>
 
           <div className="d-flex align-items-center justify-content-center">
-            <div className="">
+            <form ref={form}>
               <div className="mb-4">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
+                <label htmlFor="idName" className="form-label">
                   {t("contact.name")}
                 </label>
                 <input
                   type="text"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="idName"
+                  name="name"
+                  onChange={(e) => {
+                    setName(e.target.value);
+                  }}
                 />
               </div>
 
-              <div className="mb-3">
-                <label
-                  htmlFor="exampleFormControlInput1"
-                  className="form-label"
-                >
+              <div className="mb-4">
+                <label htmlFor="idEmail" className="form-label">
                   {t("contact.email")}
                 </label>
                 <input
                   type="email"
                   className="form-control"
-                  id="exampleFormControlInput1"
+                  id="idEmail"
+                  name="email"
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                  }}
                 />
               </div>
               <div className="mb-3">
@@ -51,14 +112,19 @@ export const Contact = () => {
                 </label>
                 <textarea
                   className="form-control"
-                  id="exampleFormControlTextarea1"
+                  id="idMessage"
+                  name="message"
                   rows="3"
+                  onChange={(e) => {
+                    setMessage(e.target.value);
+                  }}
                 ></textarea>
-                <button className="btn btn-primary mt-3">
+
+                <button className="btn btn-primary mt-4" onClick={sendEmail}>
                   {t("contact.send")}
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>

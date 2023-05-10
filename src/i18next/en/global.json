@@ -25,5 +25,9 @@
         "title":"Projects",
         "soon":"Soon",
         "go":"Go"
+    },
+    "alert":{
+      "emptyField":"There're empty fields!",
+      "success":"The message was send."
     }
 }
