@@ -9,6 +9,9 @@ export const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const serviceId = "service_rffh0xc";
+  const templateId = "template_0y48oom";
+  const publicKey = "mCx1WzmrTA6iZFc2d";
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,23 +21,19 @@ export const Contact = () => {
       return;
     }
 
-    emailjs
-      .sendForm(
-        process.env.YOUR_SERVICE_ID,
-        process.env.YOUR_TEMPLATE_ID,
-        form.current,
-        process.env.YOUR_PUBLIC_KEY
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          successAlert();
-        },
-        (error) => {
-          console.log(error.text);
-          errorToSendAlert(error.text);
-        }
-      );
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+        cleanFields();
+        successAlert();
+      },
+      (error) => {
+        console.log(error.text);
+        cleanFields();
+        errorToSendAlert(error.text);
+      }
+    );
+
   };
 
   const errorAlert = () => {
@@ -45,6 +44,12 @@ export const Contact = () => {
       width: "300px",
     });
   };
+
+  const cleanFields = () =>{
+    setName("");
+    setEmail("");
+    setMessage("");
+  }
 
   const errorToSendAlert = (text) => {
     Swal.fire({

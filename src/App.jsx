@@ -44,7 +44,7 @@ function App() {
             </Link>
 
             <div className="mt-3">
-              <Link to="./file/cv.pdf">
+              <Link to="../file/cv.pdf">
                 <button type="button" className="btn btn-primary">
                   {t("presentation.text_3")}
                 </button>
